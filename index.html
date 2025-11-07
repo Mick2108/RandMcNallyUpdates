@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn how to update your Rand McNally GPS maps with our step-by-step guide. Keep your navigation system current for the best driving experience.">
+    <meta name="keywords" content="Rand McNally GPS update, Rand McNally navigation, map update, Rand McNally GPS, GPS maps, NaviSolve">
+    <meta name="author" content="Rand McNally GPS Support">
+    <title>How to update a Rand McNally GPS map to a Rand McNally GPS Update?</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+            overflow-x: hidden;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, #0055a4 0%, #0088ce 100%);
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo i {
+            font-size: 2rem;
+            color: #ffcc00;
+        }
+
+        .logo h1 {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-menu li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+        }
+
+        .nav-menu li a:hover {
+            color: #ffcc00;
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            font-size: 1.5rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 85, 164, 0.8), rgba(0, 85, 164, 0.9)), url('https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 5rem 0;
+            text-align: center;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        .hero h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            animation: slideUp 1s ease-out;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            animation: slideUp 1.2s ease-out;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: #ffcc00;
+            color: #0055a4;
+            padding: 0.8rem 2rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: all 0.3s;
+            animation: pulse 2s infinite;
+        }
+
+        .cta-button:hover {
+            background-color: #ffd84d;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Content Section */
+        .content-section {
+            padding: 4rem 0;
+            background-color: white;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            color: #0055a4;
+            position: relative;
+        }
+
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: #ffcc00;
+            margin: 10px auto;
+            border-radius: 2px;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .content-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .content-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .card-img {
+            height: 200px;
+            background-color: #e9ecef;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #0055a4;
+            font-size: 3rem;
+        }
+
+        .card-content {
+            padding: 1.5rem;
+        }
+
+        .card-content h3 {
+            color: #0055a4;
+            margin-bottom: 1rem;
+        }
+
+        .card-content p {
+            color: #666;
+            margin-bottom: 1.5rem;
+        }
+
+        .card-button {
+            display: inline-block;
+            background-color: #0055a4;
+            color: white;
+            padding: 0.6rem 1.5rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background-color 0.3s;
+        }
+
+        .card-button:hover {
+            background-color: #0088ce;
+        }
+
+        /* Steps Section */
+        .steps-section {
+            padding: 4rem 0;
+            background-color: #f8f9fa;
+        }
+
+        .steps-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .step {
+            display: flex;
+            margin-bottom: 2.5rem;
+            animation: fadeIn 1s ease-out;
+        }
+
+        .step-number {
+            flex: 0 0 60px;
+            height: 60px;
+            background: #0055a4;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-right: 1.5rem;
+        }
+
+        .step-content {
+            flex: 1;
+        }
+
+        .step-content h3 {
+            color: #0055a4;
+            margin-bottom: 0.5rem;
+        }
+
+        /* NaviSolve Section */
+        .navisolve-section {
+            padding: 4rem 0;
+            background: linear-gradient(135deg, #0055a4 0%, #0088ce 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .navisolve-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .navisolve-content h2 {
+            margin-bottom: 1.5rem;
+        }
+
+        .navisolve-content p {
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+
+        .navisolve-button {
+            display: inline-block;
+            background-color: #ffcc00;
+            color: #0055a4;
+            padding: 0.8rem 2rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: all 0.3s;
+            font-size: 1.1rem;
+        }
+
+        .navisolve-button:hover {
+            background-color: #ffd84d;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            padding: 4rem 0;
+            background-color: white;
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            margin-bottom: 1rem;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .faq-question {
+            background: #0055a4;
+            color: white;
+            padding: 1.2rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background-color 0.3s;
+        }
+
+        .faq-question:hover {
+            background: #0088ce;
+        }
+
+        .faq-answer {
+            padding: 1.2rem;
+            background: #f8f9fa;
+            display: none;
+            animation: fadeIn 0.5s ease-out;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        /* Footer */
+        footer {
+            background: #0055a4;
+            color: white;
+            padding: 3rem 0 1rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-column h3 {
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        .footer-column h3:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 40px;
+            height: 3px;
+            background: #ffcc00;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-links a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: #ffcc00;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: white;
+            transition: all 0.3s;
+        }
+
+        .social-links a:hover {
+            background: #ffcc00;
+            color: #0055a4;
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+            color: #ccc;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideUp {
+            from { 
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to { 
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .hamburger {
+                display: block;
+            }
+
+            .nav-menu {
+                position: fixed;
+                top: 70px;
+                right: -100%;
+                flex-direction: column;
+                background: #0055a4;
+                width: 80%;
+                height: calc(100vh - 70px);
+                transition: 0.5s;
+                padding: 2rem;
+                box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+            }
+
+            .nav-menu.active {
+                right: 0;
+            }
+
+            .hero h2 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .step {
+                flex-direction: column;
+            }
+
+            .step-number {
+                margin-right: 0;
+                margin-bottom: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-map-marked-alt"></i>
+                    <h1>Rand McNally GPS</h1>
+                </div>
+                <div class="hamburger" id="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="https://navisolve.com/" target="_blank">Update</a></li>
+                    <li><a href="https://navisolve.com/" target="_blank">Support</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h2>How to Update Rand McNally GPS Map</h2>
+            <p>Keep your Rand McNally navigation system up-to-date with the latest maps and features. Follow our simple guide to ensure you always have the most accurate directions for your travels.</p>
+            <a href="https://navisolve.com/" class="cta-button" target="_blank">Update Now</a>
+        </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title">Why Update Your Rand McNally GPS?</h2>
+            <div class="content-grid">
+                <div class="content-card">
+                    <div class="card-img">
+                        <i class="fas fa-route"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Accurate Directions</h3>
+                        <p>New roads, changed traffic patterns, and updated points of interest ensure you always have the most efficient route. With Rand McNally's focus on commercial and RV navigation, these updates are particularly crucial for larger vehicles that can't easily navigate unexpected road changes or low clearances. Regular updates incorporate new residential developments, business districts, and highway expansions that have transformed the driving landscape in recent years. For professional drivers and RV enthusiasts, these updates can mean the difference between a smooth journey and costly detours.</p>
+                        <a href="#" class="card-button">Learn More</a>
+                    </div>
+                </div>
+                <div class="content-card">
+                    <div class="card-img">
+                        <i class="fas fa-gas-pump"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Save Time & Fuel</h3>
+                        <p>Optimized routes help reduce travel time and fuel consumption, saving you money on every journey. Rand McNally's specialized routing for trucks and RVs considers factors like vehicle height, weight, and hazardous materials restrictions that standard GPS systems ignore. Updated maps include new truck-specific routes, weigh station locations, and commercial vehicle restrictions that weren't present in older versions. Industry studies show that professional drivers using updated specialized navigation systems save an average of 20 minutes per day and reduce fuel consumption by up to 8% annually - significant savings for fleet operations.</p>
+                        <a href="#" class="card-button">Learn More</a>
+                    </div>
+                </div>
+                <div class="content-card">
+                    <div class="card-img">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Enhanced Safety</h3>
+                        <p>Updated maps include specialized safety features for commercial vehicles and RVs, including low clearance warnings, sharp curve alerts, and steep grade notifications. Rand McNally's navigation systems are designed with professional drivers in mind, providing alerts for truck-specific hazards and regulations. The latest updates incorporate changes to commercial vehicle restrictions, which are frequently adjusted by local municipalities. Additionally, new roundabouts, traffic calming measures, and updated intersection designs are included to help prevent accidents - particularly important for larger vehicles with limited maneuverability.</p>
+                        <a href="#" class="card-button">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Steps Section -->
+    <section class="steps-section" id="update-steps">
+        <div class="container">
+            <h2 class="section-title">How to Update Your Rand McNally GPS</h2>
+            <div class="steps-container">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Identify Your Device and Current Map Version</h3>
+                        <p>First, determine which Rand McNally device you own (such as the TND™ 730, 750, or OverDryve® series) and check your current map version. This information is typically found in the "Settings" or "System Information" menu of your device. Make note of the current version number and compare it with the latest available version on the Rand McNally website or through the Dock® application. Most Rand McNally devices display the map version in a format like "22.1" where the number corresponds to the year and quarter of release. Knowing your exact device model is crucial as update procedures vary between different Rand McNally products.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Purchase the Latest Map Update</h3>
+                        <p>Visit the official Rand McNally website or authorized resellers to purchase the latest map update for your specific device model. Rand McNally typically releases map updates quarterly, with major revisions annually. When purchasing, ensure you select the correct update for your device model and navigation system type. The update process may vary between devices, so it's crucial to get the right version. Many newer Rand McNally devices come with complimentary map updates for the first year, after which updates become a paid service. Consider subscription options if you travel frequently and need regular updates.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Download and Prepare the Update</h3>
+                        <p>For most Rand McNally devices, you'll use the Dock® software on your computer to download and transfer updates. Install the Dock application if you haven't already, then connect your device to your computer via USB cable. The Dock software will automatically detect your device and guide you through the update process. For some older models, you may need to download the update files directly to a microSD card or USB drive. Ensure you have a stable internet connection throughout the download process, as map files can be several gigabytes in size. The download may take several hours depending on your connection speed.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Install the Update on Your Device</h3>
+                        <p>Follow the on-screen instructions in the Dock software to transfer and install the update on your Rand McNally device. The update typically takes between 30-90 minutes to complete, during which you should not disconnect your device or turn off your computer. Some devices may require the update to be installed while connected to power to prevent battery drain during the process. If updating via microSD card or USB drive, insert the media into your device and follow the prompts to begin installation. Never interrupt the update process once it has started, as this can corrupt your device's software.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <h3>Verify the Update and Test Functionality</h3>
+                        <p>Once installation is complete, verify that the new map version is correctly installed by checking the "System Information" section of your device. Take your device on a short test drive to ensure all navigation functions are working correctly. Pay special attention to truck-specific or RV-specific routing features if applicable to your vehicle. Check that new points of interest, updated speed limits, and recent road changes appear correctly. If you encounter any issues, note the specific problem and contact 
+
+<a href="https://ranmcnallygps.com/">Rand McNally GPS Map Update</a>. It's also recommended to check for any firmware updates that might be available for your device, as these can improve performance beyond just map data.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NaviSolve Section -->
+    <section class="navisolve-section">
+        <div class="container">
+            <div class="navisolve-content">
+                <h2>Professional GPS Update Services</h2>
+                <p>For guaranteed compatibility and expert support with your Rand McNally GPS updates, visit our trusted partner NaviSolve. They specialize in navigation system updates for all Rand McNally models and provide comprehensive technical support to ensure a seamless update experience.</p>
+                <a href="https://navisolve.com/" class="navisolve-button" target="_blank">Update with NaviSolve</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>How often should I update my Rand McNally GPS maps?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>For professional drivers and frequent travelers, we recommend updating your Rand McNally GPS maps at least once a quarter to ensure you have the latest road changes, commercial vehicle restrictions, and points of interest. Rand McNally typically releases new map updates quarterly, with major revisions annually. However, if you operate in regions experiencing rapid development or frequently travel to unfamiliar locations, subscribing to their update service might be beneficial. Regular updates ensure you have access to new truck routes, low clearance updates, weigh station locations, and changed traffic patterns that are essential for commercial navigation. According to transportation authorities, commercial vehicle restrictions change frequently, making regular updates essential for compliance and efficiency.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Can I update my Rand McNally GPS for free?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Most Rand McNally GPS map updates require a purchase, as they include specialized commercial mapping data. However, some newer devices may include complimentary updates for the first year. Check with your purchase documentation or the Rand McNally website for specific offers. Many Rand McNally devices come with one year of complimentary map updates through their update program. After this period, updates typically cost between $99-$199 depending on your device model and subscription length. Some third-party services may offer lower prices, but it's crucial to ensure they provide genuine, compatible updates to avoid damaging your navigation system or voiding your warranty. Always verify the source before purchasing map updates.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>What if my update fails or encounters errors?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>If your Rand McNally update fails, first ensure your device is sufficiently charged or connected to power. Try using a different USB cable, restarting your computer, and ensuring the Dock software is updated to the latest version. If problems persist, contact Rand McNally customer support for assistance. Common issues include unstable internet connections, insufficient storage space on the device, corrupted download files, or interruptions during the update process. Never disconnect your device during an update as this can corrupt the system software. If an update fails mid-process, you may need to perform a factory reset or contact support for recovery options. To minimize risks, always ensure your device's battery is fully charged and you have a stable internet connection before starting the update.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>How long does a GPS map update take?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>The update process for Rand McNally devices typically takes between 30 minutes to 2 hours, depending on your specific device model and the size of the update. The download time for the update files to your computer can add several hours depending on your internet connection speed. For larger updates or slower internet connections, this download might take 2-4 hours. The actual installation on your device generally takes 45-90 minutes. Plan to perform the update when you have adequate time and can keep your computer running uninterrupted. Some newer Rand McNally models with cellular connectivity may allow for over-the-air updates that don't require a computer connection, significantly simplifying the process.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>What's the difference between standard and specialized Rand McNally maps?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Rand McNally specializes in commercial and RV navigation, which differs significantly from standard consumer GPS maps. Their specialized maps include truck-specific attributes like road classifications based on truck accessibility, low clearance warnings, bridge weight limits, hazardous material restrictions, and designated truck routes. They also include commercial points of interest like truck stops, weigh stations, and loading docks that aren't typically found on consumer maps. For RV users, the maps include campgrounds, dump stations, and RV-friendly routes that avoid roads unsuitable for larger vehicles. This specialized data is essential for professional drivers and RV enthusiasts who need routing that considers their vehicle's specific requirements and restrictions.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Rand McNally GPS</h3>
+                    <p>Your trusted source for professional GPS navigation updates and support. We help commercial drivers and RV enthusiasts keep their navigation systems current with the latest specialized maps and features.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="https://navisolve.com/" target="_blank">Update GPS</a></li>
+                        <li><a href="https://navisolve.com/" target="_blank">Support</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Legal</h3>
+                    <ul class="footer-links">
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms-conditions.html">Terms & Conditions</a></li>
+                        <li><a href="return-policy.html">Return Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Info</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-phone"></i> 1-800-RAND-MCNALLY</li>
+                        <li><i class="fas fa-envelope"></i> support@randmcnallygps.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Rand McNally, Skokie, IL</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Rand McNally GPS. All rights reserved. Rand McNally is a registered trademark.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('navMenu');
+
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+
+        // FAQ Accordion
+        const faqItems = document.querySelectorAll('.faq-item');
+
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            
+            question.addEventListener('click', () => {
+                // Close all other items
+                faqItems.forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.classList.remove('active');
+                    }
+                });
+                
+                // Toggle current item
+                item.classList.toggle('active');
+            });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    navMenu.classList.remove('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
